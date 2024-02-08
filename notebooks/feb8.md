@@ -42,6 +42,9 @@ export PYTHONPATH="/groups/gaf51265/fumiyau/pivqa/src:$PYTHONPATH"
     を行った。逐一PATHを設定する必要があるがまぁこのままで
 ・アノテーションから速度と位置のnumpy.arrayを抽出
     シーンインデックスもつけたし、train, validでわけてある
+・gitのpush環境構築
+    aist-abciでgitのアクセストークン作成、devブランチにpush
+    https://qiita.com/riita10069/items/e875ae6b96756abd0956
 
 明日やること
 ・質問回答データセットの作成
