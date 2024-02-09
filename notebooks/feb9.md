@@ -53,3 +53,12 @@ export PYTHONPATH="/groups/gaf51265/fumiyau/pivqa/src:$PYTHONPATH"
    - どのくらいバイアス・バリアンスのある回答をするか？
    - clevrerのpredictiveに転移する？
    - counter factrualには、衝突による速度変化の明示が必要？
+   - とりあえず位置と速度は終わった
+   - 累積はmypyでのチェックがまだ（questionの方はできてる。本体がまだ）
+   - 相対位置・速度はすぐできるでしょう、👆ができれば
+
+# Next Action
+ - データセット自作完了
+ - Video-LLaVA動かす
+ - 自作データセットで訓練後にテストデータでのテスト
+ - CLEVRERでFTしたあと、質問のタイプごとに対象学習

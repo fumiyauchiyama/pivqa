@@ -2,48 +2,15 @@ import json
 import os
 from tqdm import tqdm
 import numpy as np
-from typing import Tuple, List, Literal, Dict, Any
+from typing import Tuple, List, Literal, Union
 import random
 
+from dataset.question import LocationQuestion, VelocityQuestion, SimpleCumulativeQuestion
+from dataset.annotation import ObjectProperty, Collision, Annotation
 from constants import CLEVRER_PATH, PIVQA_DATASET_DIR, SEED, FRAME_RATE
 
 source_directory = CLEVRER_PATH
 destination_directory = PIVQA_DATASET_DIR
-
-class ObjectProperty:
-    def __init__(self, object_id:int, color:str, material:str, shape:str):
-        self.object_id = object_id
-        self.color = color
-        self.material = material
-        self.shape = shape
-
-    def __repr__(self)->str:
-        return f"ObjectProperty(object_id={self.object_id}, color={self.color}, material={self.material}, shape={self.shape})"
-
-class Collision:
-    def __init__(self, object_ids:List[int], frame_id:int, location:List[int]):
-        assert len(object_ids)==2, "Please specify two objects to collide."
-        assert len(location)==3, "Please specify the 3D location."
-        self.object_ids = object_ids
-        self.frame_id = frame_id
-        self.location = location
-
-class Annotation:
-    def __init__(
-            self, 
-            scene_index:int, 
-            video_filename:str, 
-            object_properties:List[ObjectProperty], 
-            locations:np.ndarray, 
-            velocities:np.ndarray,
-            collisions:List[Collision]
-            ):
-        self.scene_index = scene_index
-        self.video_filename = video_filename
-        self.object_properties = object_properties
-        self.locations = locations
-        self.velocities = velocities
-        self.collisions = collisions
 
 def load_annotation()->Tuple[List[Annotation], List[Annotation]]:
     """
@@ -133,106 +100,6 @@ def load_annotation()->Tuple[List[Annotation], List[Annotation]]:
 
     return train_annotations, valid_annotaitons
 
-class Question:
-    def __init__(
-            self, 
-            locations:np.ndarray,
-            velocities:np.ndarray,
-            question_template:str, 
-            question_type:str, 
-            question_subtype:str, 
-            answer_template:str
-            ):
-        self.locations = locations
-        self.velocities = velocities
-        self.question_template = question_template
-        self.question_type = question_type
-        self.question_subtype = question_subtype
-        self.answer_template = answer_template
-
-    def calc_location(
-            self, 
-            object_id:int, 
-            frame_idx:int
-            )->Tuple[float, float, float]:
-        x, y, z = self.locations[object_id, frame_idx]
-        return x, y, z
-    
-    def calc_velocity(
-            self, 
-            object_id:int, 
-            frame_idx:int
-            )->Tuple[float, float, float]:
-        x, y, z = self.velocities[object_id, frame_idx]
-        return x, y, z
-
-    def generate_qa(self, *args: Any, **kwargs: Any)->Tuple[str, str]:
-        raise NotImplementedError
-    
-class LocationQuestion(Question):
-    def __init__(
-            self, 
-            locations:np.ndarray,
-            velocities:np.ndarray,
-            question_template:str="""Where is the {color} {shape} at {time}s? Please provide the coordinates in three dimensions.""", 
-            question_type:str="physical", 
-            question_subtype:str="location", 
-            answer_template:str="[{x}, {y}, {z}]"
-            ):
-        super().__init__(
-            locations,
-            velocities, 
-            question_template, 
-            question_type, 
-            question_subtype, 
-            answer_template
-            )
-
-    def generate_qa(
-            self,
-            object_id:int,
-            color:str,
-            shape:str,
-            frame_idx:int
-            )->Tuple[str, str]:
-        time = frame_idx / FRAME_RATE
-        question = self.question_template.format(color=color, shape=shape, time=time)
-        x, y, z = self.calc_location(object_id, frame_idx)
-        answer = self.answer_template.format(x=x, y=y, z=z)
-        return question, answer
-
-class VelocityQuestion(Question):
-    def __init__(
-            self, 
-            locations:np.ndarray,
-            velocities:np.ndarray,
-            question_template:str="""Where is the {color} {shape} at {time}s? Please provide the coordinates in three dimensions.""", 
-            question_type:str="physical", 
-            question_subtype:str="location", 
-            answer_template:str="[{x}, {y}, {z}]"
-            ):
-        super().__init__(
-            locations,
-            velocities, 
-            question_template, 
-            question_type, 
-            question_subtype, 
-            answer_template
-            )
-
-    def generate_qa(
-            self,
-            object_id:int,
-            color:str,
-            shape:str,
-            frame_idx:int
-            )->Tuple[str, str]:
-        time = frame_idx / FRAME_RATE
-        question = self.question_template.format(color=color, shape=shape, time=time)
-        x, y, z = self.calc_velocity(object_id, frame_idx)
-        answer = self.answer_template.format(x=x, y=y, z=z)
-        return question, answer
-
 def export_qa(
         annotations:List[Annotation], 
         dataset_type:Literal["train", "validation"],
@@ -262,19 +129,38 @@ def export_qa(
         for i in range(num_questions_per_a_scene):
 
             # choose template of a question
-            question_cls = random.choice([LocationQuestion, VelocityQuestion])
+            question_cls = random.choice([LocationQuestion, VelocityQuestion, SimpleCumulativeQuestion])
             qa_generator = question_cls(annotation.locations, annotation.velocities)
 
             # choose objects and retrieve attributes 
-            object_id = random.randint(0, len(annotation.object_properties)-1)
-            frame_id = random.randint(0, annotation.locations.shape[0]-1)
+            object_id = random.randint(0, annotation.locations.shape[0]-1)
+            frame_id = random.randint(0, annotation.locations.shape[1]-1)
 
             color = annotation.object_properties[object_id].color
             shape = annotation.object_properties[object_id].shape
 
             # generate QA text
-            question, answer = qa_generator.generate_qa(object_id, color, shape, frame_id)
+            if isinstance(qa_generator, Union[LocationQuestion, VelocityQuestion]):
+                question, answer = qa_generator.generate_qa(object_id, color, shape, frame_id)
+            elif isinstance(qa_generator, SimpleCumulativeQuestion):
+                start_frame_idx = random.randint(0, annotation.locations.shape[0]-1-FRAME_RATE)
+                end_frame_idx = random.randint(start_frame_idx+FRAME_RATE, annotation.locations.shape[0]-1)
+                related_collisions = [] 
+                for c in annotation.collisions:
+                    if (c.frame_id>=start_frame_idx and c.frame_id<end_frame_idx):
+                        related_collisions.append(c)
+                related_collisions = sorted(related_collisions, key=lambda x: x.frame_id)
 
+                question, answer = qa_generator.generate_qa(
+                    object_id, 
+                    annotation.object_properties, 
+                    related_collisions, 
+                    color, 
+                    shape, 
+                    start_frame_idx, 
+                    end_frame_idx
+                    )
+                
             question_dict = {
                 "question_id": i,
                 "question": question,
