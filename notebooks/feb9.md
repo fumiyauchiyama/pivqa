@@ -1,9 +1,9 @@
 ~~~bash
-[username@es1 ~]$ qrsh -g grpname -l rt_G.small=1 -l h_rt=2:00:00
-[username@g0001 ~]$ module load singularitypro
-[username@g0001 ~]$ export SINGULARITY_TMPDIR=$SGE_LOCALDIR
-[username@g0001 ~]$ singularity run --bind /groups/gaf51265/fumiyau/pivqa:/groups/gaf51265/fumiyau/pivqa --nv docker://nvcr.io/nvidia/pytorch:23.11-py3
-cd /groups/gaf51265/fumiyau/pivqa/environments/singularity
+qrsh -g grpname -l rt_G.small=1 -l h_rt=2:00:00
+module load singularitypro
+export SINGULARITY_TMPDIR=$SGE_LOCALDIR
+singularity run --bind /groups/gaf51265/fumiyau/pivqa:/groups/gaf51265/fumiyau/pivqa --nv docker://nvcr.io/nvidia/pytorch:23.11-py3
+cd /groups/gaf51265/fumiyau/pivqa
 export PATH="$HOME/.local/bin:$PATH"
 export PYTHONPATH="/groups/gaf51265/fumiyau/pivqa/src:$PYTHONPATH"
 ~~~
