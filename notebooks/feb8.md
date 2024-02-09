@@ -47,7 +47,7 @@ export PYTHONPATH="/groups/gaf51265/fumiyau/pivqa/src:$PYTHONPATH"
 
 - gitのpush環境構築
   - aist-abciでgitのアクセストークン作成し、devブランチにpush。
-  - 参考リンク: [Qiita: 【初心者向け】AIスクールAISTでの環境構築と実装手順](https://qiita.com/riita10069/items/e875ae6b96756abd0956)
+  - 参考リンク: [Qiita](https://qiita.com/riita10069/items/e875ae6b96756abd0956)
 
 ## 明日やること
 
