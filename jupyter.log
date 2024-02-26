@@ -1,0 +1,527 @@
+[I 15:14:21.887 NotebookApp] jupyter_tensorboard extension loaded.
+[I 15:14:22.680 NotebookApp] JupyterLab extension loaded from /usr/local/lib/python3.10/dist-packages/jupyterlab
+[I 15:14:22.680 NotebookApp] JupyterLab application directory is /usr/local/share/jupyter/lab
+[I 15:14:22.682 NotebookApp] [Jupytext Server Extension] NotebookApp.contents_manager_class is (a subclass of) jupytext.TextFileContentsManager already - OK
+[I 15:14:22.703 NotebookApp] Serving notebooks from local directory: /groups/gaf51265/fumiyau/pivqa
+[I 15:14:22.704 NotebookApp] Jupyter Notebook 6.4.10 is running at:
+[I 15:14:22.704 NotebookApp] http://hostname:8888/?token=030cf026ad4d747c3065d670b07394455aab8c102285890e
+[I 15:14:22.704 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 15:14:22.710 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/acc13097es/.local/share/jupyter/runtime/nbserver-2944372-open.html
+    Or copy and paste this URL:
+        http://hostname:8888/?token=030cf026ad4d747c3065d670b07394455aab8c102285890e
+[I 15:19:30.130 NotebookApp] 302 GET /?token=e7f0ba979d4ffd9eeb7e6debf5a326f853fc289583f92dc5 (10.0.0.1) 0.390000ms
+[I 15:19:30.196 NotebookApp] 302 GET /tree?token=e7f0ba979d4ffd9eeb7e6debf5a326f853fc289583f92dc5 (10.0.0.1) 0.490000ms
+[I 15:19:46.128 NotebookApp] 302 POST /login?next=%2Ftree%3Ftoken%3De7f0ba979d4ffd9eeb7e6debf5a326f853fc289583f92dc5 (10.0.0.1) 0.900000ms
+[I 15:20:06.815 NotebookApp] Creating new notebook in /notebooks
+[I 15:20:06.852 NotebookApp] Saving Untitled.ipynb
+[I 15:20:08.787 NotebookApp] Kernel started: 336bcc04-c46f-4e09-bdeb-4f31dc74fef7, name: python3
+[W 15:20:08.802 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20240226151419 (10.0.0.1) 13.480000ms referer=http://localhost:18888/notebooks/notebooks/Untitled.ipynb?kernel_name=python3
+[I 15:22:29.260 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:22:29.263 NotebookApp] Saving Untitled.ipynb
+/usr/local/lib/python3.10/dist-packages/nbformat/__init__.py:129: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+/usr/local/lib/python3.10/dist-packages/notebook/services/contents/manager.py:354: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate_nb(model['content'])
+[I 15:24:08.779 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:24:08.782 NotebookApp] Saving Untitled.ipynb
+[I 15:28:08.792 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:28:08.794 NotebookApp] Saving Untitled.ipynb
+[I 15:30:08.778 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:30:08.780 NotebookApp] Saving Untitled.ipynb
+[I 15:32:08.776 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:32:08.778 NotebookApp] Saving Untitled.ipynb
+[I 15:34:08.787 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:34:08.789 NotebookApp] Saving Untitled.ipynb
+[W 15:35:05.827 NotebookApp] IOPub data rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_data_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[W 15:35:27.794 NotebookApp] IOPub data rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_data_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[I 15:36:08.868 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:36:08.870 NotebookApp] Saving Untitled.ipynb
+[I 15:38:08.846 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:38:08.848 NotebookApp] Saving Untitled.ipynb
+[I 15:50:08.885 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:50:08.888 NotebookApp] Saving Untitled.ipynb
+[I 15:52:08.860 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:52:08.862 NotebookApp] Saving Untitled.ipynb
+[I 15:54:08.855 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:54:08.857 NotebookApp] Saving Untitled.ipynb
+[I 15:56:09.169 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:56:09.171 NotebookApp] Saving Untitled.ipynb
+[I 15:58:08.917 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:58:08.919 NotebookApp] Saving Untitled.ipynb
+[I 16:00:08.874 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:00:08.876 NotebookApp] Saving Untitled.ipynb
+[I 16:02:08.871 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:02:08.874 NotebookApp] Saving Untitled.ipynb
+[I 16:04:08.877 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:04:08.883 NotebookApp] Saving Untitled.ipynb
+[I 16:12:08.902 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:12:08.904 NotebookApp] Saving Untitled.ipynb
+[I 16:14:08.867 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:14:08.869 NotebookApp] Saving Untitled.ipynb
+[I 16:16:08.881 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:16:08.884 NotebookApp] Saving Untitled.ipynb
+[I 16:18:08.884 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:18:08.887 NotebookApp] Saving Untitled.ipynb
+[I 16:20:08.900 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:20:08.903 NotebookApp] Saving Untitled.ipynb
+[I 16:26:08.977 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:26:08.981 NotebookApp] Saving Untitled.ipynb
+[I 16:34:08.923 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:34:08.926 NotebookApp] Saving Untitled.ipynb
+[I 16:36:08.921 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:36:08.924 NotebookApp] Saving Untitled.ipynb
+[I 16:44:08.927 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:44:08.930 NotebookApp] Saving Untitled.ipynb
+[I 16:46:08.923 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:46:08.926 NotebookApp] Saving Untitled.ipynb
+[I 16:48:08.917 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:48:08.920 NotebookApp] Saving Untitled.ipynb
+[I 16:50:12.588 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:50:12.591 NotebookApp] Saving Untitled.ipynb
+[I 16:52:08.929 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:52:08.933 NotebookApp] Saving Untitled.ipynb
+[I 16:54:08.930 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:54:08.933 NotebookApp] Saving Untitled.ipynb
+[I 16:58:08.945 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 16:58:08.948 NotebookApp] Saving Untitled.ipynb
+[I 17:00:08.970 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:00:08.974 NotebookApp] Saving Untitled.ipynb
+[I 17:16:08.935 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:16:08.939 NotebookApp] Saving Untitled.ipynb
+[I 17:18:03.391 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:18:04.522 NotebookApp] Kernel restarted: 336bcc04-c46f-4e09-bdeb-4f31dc74fef7
+[I 17:18:04.650 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:18:05.153 NotebookApp] Replaying 3 buffered messages
+[I 17:18:08.922 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:18:08.925 NotebookApp] Saving Untitled.ipynb
+[E 17:18:10.181 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 17:18:10.209 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:18:11.281 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[E 17:18:21.095 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 17:18:21.096 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:18:22.235 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:19:59.303 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:19:59.305 NotebookApp] Saving Untitled.ipynb
+[I 17:20:08.851 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:20:08.854 NotebookApp] Saving Untitled.ipynb
+[I 17:22:08.859 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:22:08.862 NotebookApp] Saving Untitled.ipynb
+[E 17:22:30.512 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+[W 17:22:30.513 NotebookApp] Write error on <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>: [Errno 9] Bad file descriptor
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 17:22:30.513 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:22:31.626 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[E 17:24:05.744 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+[W 17:24:05.746 NotebookApp] zmq message arrived on closed channel
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 17:24:05.747 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[W 17:24:05.747 NotebookApp] zmq message arrived on closed channel
+[I 17:24:06.897 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:24:06.922 NotebookApp] Replaying 13 buffered messages
+[I 17:24:08.838 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:24:08.842 NotebookApp] Saving Untitled.ipynb
+Task exception was never retrieved
+future: <Task finished name='Task-10036' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at /usr/local/lib/python3.10/dist-packages/tornado/websocket.py:1085> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1087, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1089, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 17:24:55.911 NotebookApp] Kernel interrupted: 336bcc04-c46f-4e09-bdeb-4f31dc74fef7
+[I 17:26:08.844 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:26:08.847 NotebookApp] Saving Untitled.ipynb
+[I 17:28:08.841 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:28:08.844 NotebookApp] Saving Untitled.ipynb
+[I 17:30:08.843 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:30:08.846 NotebookApp] Saving Untitled.ipynb
+[I 17:32:08.864 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:32:08.868 NotebookApp] Saving Untitled.ipynb
+[I 17:36:08.855 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:36:08.858 NotebookApp] Saving Untitled.ipynb
+[E 17:48:06.870 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+[W 17:48:06.872 NotebookApp] zmq message arrived on closed channel
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 17:48:06.873 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[W 17:48:06.873 NotebookApp] zmq message arrived on closed channel
+[I 17:48:08.058 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:48:08.058 NotebookApp] Replaying 20 buffered messages
+[I 17:48:08.854 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:48:08.857 NotebookApp] Saving Untitled.ipynb
+[I 17:50:08.872 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:50:08.876 NotebookApp] Saving Untitled.ipynb
+[I 17:51:20.838 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:57:52.446 NotebookApp] Restoring connection for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[I 17:58:45.355 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 17:58:45.358 NotebookApp] Saving Untitled.ipynb
+[I 18:00:12.168 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 18:00:12.171 NotebookApp] Saving Untitled.ipynb
+[I 18:29:00.976 NotebookApp] Starting buffering for 336bcc04-c46f-4e09-bdeb-4f31dc74fef7:714b0c0d2a9d4d7b8f6b4446fcfbc935
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+bash: poetr: command not found
+[I 21:15:23.825 NotebookApp] jupyter_tensorboard extension loaded.
+[I 2024-02-26 21:15:24.029 ServerApp] Extension package jupyter_lsp took 0.8337s to import
+[I 2024-02-26 21:15:24.374 ServerApp] Extension package jupyter_server_terminals took 0.3446s to import
+[I 21:15:24.527 NotebookApp] JupyterLab extension loaded from /usr/local/lib/python3.10/dist-packages/jupyterlab
+[I 21:15:24.527 NotebookApp] JupyterLab application directory is /usr/local/share/jupyter/lab
+[I 21:15:24.528 NotebookApp] [Jupytext Server Extension] NotebookApp.contents_manager_class is (a subclass of) jupytext.TextFileContentsManager already - OK
+[I 21:15:24.536 NotebookApp] Serving notebooks from local directory: /groups/gaf51265/fumiyau/pivqa
+[I 21:15:24.536 NotebookApp] Jupyter Notebook 6.4.10 is running at:
+[I 21:15:24.536 NotebookApp] http://hostname:8888/?token=4a21d8de5434f4618ecebf355ed99888ff43bb7149466f40
+[I 21:15:24.536 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:15:24.542 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/acc13097es/.local/share/jupyter/runtime/nbserver-2885357-open.html
+    Or copy and paste this URL:
+        http://hostname:8888/?token=4a21d8de5434f4618ecebf355ed99888ff43bb7149466f40
+[W 2024-02-26 21:15:28.028 ServerApp] jupytext | error adding extension (enabled: True): The module 'jupytext' could not be found (No module named 'jupytext'). Are you sure the extension is installed?
+    Traceback (most recent call last):
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 322, in add_extension
+        extpkg = ExtensionPackage(name=extension_name, enabled=enabled)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 186, in __init__
+        self._load_metadata()
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 201, in _load_metadata
+        raise ExtensionModuleNotFound(msg) from None
+    jupyter_server.extension.utils.ExtensionModuleNotFound: The module 'jupytext' could not be found (No module named 'jupytext'). Are you sure the extension is installed?
+[I 2024-02-26 21:15:28.049 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-02-26 21:15:28.054 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-02-26 21:15:28.058 ServerApp] jupyterlab | extension was successfully linked.
+[W 2024-02-26 21:15:28.060 JupyterNotebookApp] 'allow_root' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.060 JupyterNotebookApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.060 JupyterNotebookApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.060 JupyterNotebookApp] 'custom_display_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.061 JupyterNotebookApp] 'custom_display_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.061 JupyterNotebookApp] 'terminado_settings' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.061 JupyterNotebookApp] 'contents_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.061 JupyterNotebookApp] 'contents_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-02-26 21:15:28.063 ServerApp] notebook | error linking extension: The 'contents_manager_class' trait of <jupyter_server.serverapp.ServerApp object at 0x1462ae203c40> instance must be a type, but 'jupytext.TextFileContentsManager' could not be imported
+    Traceback (most recent call last):
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 2139, in validate
+        value = self._resolve_string(value)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 2015, in _resolve_string
+        return import_item(string)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/utils/importstring.py", line 33, in import_item
+        module = __import__(package, fromlist=[obj])
+    ModuleNotFoundError: No module named 'jupytext'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 345, in link_extension
+        extension.link_all_points(self.serverapp)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 227, in link_all_points
+        self.link_point(point_name, serverapp)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 217, in link_point
+        point.link(serverapp)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 139, in link
+        linker(serverapp)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/application.py", line 411, in _link_jupyter_server_extension
+        self.serverapp.update_config(self.config)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/config/configurable.py", line 244, in update_config
+        self._load_config(config)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/config/configurable.py", line 193, in _load_config
+        setattr(self, name, deepcopy(config_value))
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 716, in __set__
+        self.set(obj, value)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 690, in set
+        new_value = self._validate(obj, value)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 722, in _validate
+        value = self.validate(obj, value)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/traitlets/traitlets.py", line 2141, in validate
+        raise TraitError(
+    traitlets.traitlets.TraitError: The 'contents_manager_class' trait of <jupyter_server.serverapp.ServerApp object at 0x1462ae203c40> instance must be a type, but 'jupytext.TextFileContentsManager' could not be imported
+[I 2024-02-26 21:15:28.067 ServerApp] Writing Jupyter server cookie secret to /home/acc13097es/.local/share/jupyter/runtime/jupyter_cookie_secret
+[W 2024-02-26 21:15:38.031 ServerApp] jupytext | error adding extension (enabled: True): The module 'jupytext' could not be found (No module named 'jupytext'). Are you sure the extension is installed?
+    Traceback (most recent call last):
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 322, in add_extension
+        extpkg = ExtensionPackage(name=extension_name, enabled=enabled)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 186, in __init__
+        self._load_metadata()
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 201, in _load_metadata
+        raise ExtensionModuleNotFound(msg) from None
+    jupyter_server.extension.utils.ExtensionModuleNotFound: The module 'jupytext' could not be found (No module named 'jupytext'). Are you sure the extension is installed?
+[W 2024-02-26 21:15:38.031 ServerApp] jupyter_tensorboard | error adding extension (enabled: True): The module 'jupyter_tensorboard' could not be found (No module named 'jupyter_tensorboard'). Are you sure the extension is installed?
+    Traceback (most recent call last):
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 322, in add_extension
+        extpkg = ExtensionPackage(name=extension_name, enabled=enabled)
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 186, in __init__
+        self._load_metadata()
+      File "/groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyter_server/extension/manager.py", line 201, in _load_metadata
+        raise ExtensionModuleNotFound(msg) from None
+    jupyter_server.extension.utils.ExtensionModuleNotFound: The module 'jupyter_tensorboard' could not be found (No module named 'jupyter_tensorboard'). Are you sure the extension is installed?
+[I 2024-02-26 21:15:38.031 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-02-26 21:15:38.781 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-02-26 21:15:38.783 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-02-26 21:15:38.784 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-02-26 21:15:38.794 LabApp] JupyterLab extension loaded from /groups/gaf51265/fumiyau/pivqa/.venv/lib/python3.10/site-packages/jupyterlab
+[I 2024-02-26 21:15:38.794 LabApp] JupyterLab application directory is /groups/gaf51265/fumiyau/pivqa/.venv/share/jupyter/lab
+[I 2024-02-26 21:15:38.794 LabApp] Extension Manager is 'pypi'.
+[I 2024-02-26 21:15:38.992 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-02-26 21:15:38.997 ServerApp] notebook | extension was successfully loaded.
+[I 2024-02-26 21:15:38.998 ServerApp] Serving notebooks from local directory: /groups/gaf51265/fumiyau/pivqa
+[I 2024-02-26 21:15:38.998 ServerApp] Jupyter Server 2.12.5 is running at:
+[I 2024-02-26 21:15:38.998 ServerApp] http://g0007.abci.local:0/tree?token=45a5675a23154be279d4cf9b125685207089a522c7217990
+[I 2024-02-26 21:15:38.998 ServerApp]     http://127.0.0.1:0/tree?token=45a5675a23154be279d4cf9b125685207089a522c7217990
+[I 2024-02-26 21:15:38.998 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-02-26 21:15:39.059 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/acc13097es/.local/share/jupyter/runtime/jpserver-2885242-open.html
+    Or copy and paste one of these URLs:
+        http://g0007.abci.local:0/tree?token=45a5675a23154be279d4cf9b125685207089a522c7217990
+        http://127.0.0.1:0/tree?token=45a5675a23154be279d4cf9b125685207089a522c7217990
+[I 2024-02-26 21:15:39.643 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 21:16:40.742 NotebookApp] Notebook notebooks/Untitled.ipynb is not trusted
+[W 21:16:41.156 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20240226211522 (10.0.0.1) 6.900000ms referer=http://localhost:18888/notebooks/notebooks/Untitled.ipynb
+[I 21:16:44.503 NotebookApp] Kernel started: f3ecb3ad-1cfc-4ed1-9e52-9cc7241161e1, name: python3
+[E 21:16:57.285 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 584, in _run_callback
+        f = callback(*args, **kwargs)
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 308, in stream_callback
+        return callback(self, msg)
+      File "/usr/local/lib/python3.10/dist-packages/notebook/services/kernels/handlers.py", line 572, in _on_zmq_reply
+        super()._on_zmq_reply(stream, msg)
+      File "/usr/local/lib/python3.10/dist-packages/notebook/base/zmqhandlers.py", line 256, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 334, in write_message
+        return self.ws_connection.write_message(message, binary=binary)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1081, in write_message
+        fut = self._write_frame(True, opcode, message, flags=flags)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1056, in _write_frame
+        return self.stream.write(frame)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 539, in write
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+[E 21:16:57.293 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 634, in _handle_events
+        self._handle_recv()
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 663, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 584, in _run_callback
+        f = callback(*args, **kwargs)
+      File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 308, in stream_callback
+        return callback(self, msg)
+      File "/usr/local/lib/python3.10/dist-packages/notebook/services/kernels/handlers.py", line 572, in _on_zmq_reply
+        super()._on_zmq_reply(stream, msg)
+      File "/usr/local/lib/python3.10/dist-packages/notebook/base/zmqhandlers.py", line 256, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 334, in write_message
+        return self.ws_connection.write_message(message, binary=binary)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1081, in write_message
+        fut = self._write_frame(True, opcode, message, flags=flags)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1056, in _write_frame
+        return self.stream.write(frame)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 539, in write
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+Exception in callback BaseAsyncIOLoop._handle_events(34, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(34, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 634, in _handle_events
+    self._handle_recv()
+  File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 663, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 584, in _run_callback
+    f = callback(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/zmq/eventloop/zmqstream.py", line 308, in stream_callback
+    return callback(self, msg)
+  File "/usr/local/lib/python3.10/dist-packages/notebook/services/kernels/handlers.py", line 572, in _on_zmq_reply
+    super()._on_zmq_reply(stream, msg)
+  File "/usr/local/lib/python3.10/dist-packages/notebook/base/zmqhandlers.py", line 256, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 334, in write_message
+    return self.ws_connection.write_message(message, binary=binary)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1081, in write_message
+    fut = self._write_frame(True, opcode, message, flags=flags)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/websocket.py", line 1056, in _write_frame
+    return self.stream.write(frame)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 539, in write
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 21:16:59.103 NotebookApp] Starting buffering for f3ecb3ad-1cfc-4ed1-9e52-9cc7241161e1:ddab5685c7774cffab85af70c7f9e800
+[I 21:17:00.125 NotebookApp] Restoring connection for f3ecb3ad-1cfc-4ed1-9e52-9cc7241161e1:ddab5685c7774cffab85af70c7f9e800
+[I 21:18:45.544 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 21:18:45.546 NotebookApp] Saving Untitled.ipynb
+[W 21:18:45.547 NotebookApp] Notebook notebooks/Untitled.ipynb is not trusted
+[E 21:23:41.335 NotebookApp] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+        self._handle_write()
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+        self._write_buffer.advance(num_bytes)
+      File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+        assert 0 < size <= self._size
+    AssertionError
+Exception in callback None()
+handle: <Handle cancelled>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/platform/asyncio.py", line 192, in _handle_events
+    handler_func(fileobj, events)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 695, in _handle_events
+    self._handle_write()
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 965, in _handle_write
+    self._write_buffer.advance(num_bytes)
+  File "/usr/local/lib/python3.10/dist-packages/tornado/iostream.py", line 182, in advance
+    assert 0 < size <= self._size
+AssertionError
+[I 21:23:41.336 NotebookApp] Starting buffering for f3ecb3ad-1cfc-4ed1-9e52-9cc7241161e1:ddab5685c7774cffab85af70c7f9e800
+[I 21:23:42.543 NotebookApp] Restoring connection for f3ecb3ad-1cfc-4ed1-9e52-9cc7241161e1:ddab5685c7774cffab85af70c7f9e800
+[I 21:24:45.304 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 21:24:45.306 NotebookApp] Saving Untitled.ipynb
+[W 21:24:45.307 NotebookApp] Notebook notebooks/Untitled.ipynb is not trusted

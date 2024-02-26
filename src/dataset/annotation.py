@@ -1,4 +1,5 @@
 from typing import Tuple, List, Literal
+import numpy as np
 
 class ObjectProperty:
     def __init__(self, object_id:int, color:str, material:str, shape:str):

@@ -5,9 +5,20 @@ import numpy as np
 from typing import Tuple, List, Literal, Union
 import random
 
-from dataset.question import LocationQuestion, VelocityQuestion, SimpleCumulativeQuestion
+from dataset.question import (
+    LocationQuestion, 
+    VelocityQuestion, 
+    SimpleCumulativeQuestion, 
+    ElaborativeCumulativeQuestion
+    )
 from dataset.annotation import ObjectProperty, Collision, Annotation
-from constants import CLEVRER_PATH, PIVQA_DATASET_DIR, SEED, FRAME_RATE
+from constants import (
+    CLEVRER_PATH, 
+    PIVQA_DATASET_DIR, 
+    SEED, 
+    FRAME_RATE, 
+    NUM_QUESTIONS_PER_A_SCENE
+    )
 
 source_directory = CLEVRER_PATH
 destination_directory = PIVQA_DATASET_DIR
@@ -27,12 +38,9 @@ def load_annotation()->Tuple[List[Annotation], List[Annotation]]:
     valid_annotaitons = []
 
     for root, dirs, files in os.walk(source_directory):
-        dest_root = os.path.join(destination_directory, os.path.relpath(root, source_directory))
 
-        if not "annotations" in dest_root:
+        if not "annotations" in root:
             continue
-
-        os.makedirs(dest_root, exist_ok=True)
 
         print(f"loading from {root}...")
 
@@ -103,7 +111,7 @@ def load_annotation()->Tuple[List[Annotation], List[Annotation]]:
 def export_qa(
         annotations:List[Annotation], 
         dataset_type:Literal["train", "validation"],
-        num_questions_per_a_scene:int=15,
+        num_questions_per_a_scene:int=NUM_QUESTIONS_PER_A_SCENE,
         )->None:
     """
     output: qa dataset (list of {questions, scene_index, video_filename})
@@ -129,7 +137,12 @@ def export_qa(
         for i in range(num_questions_per_a_scene):
 
             # choose template of a question
-            question_cls = random.choice([LocationQuestion, VelocityQuestion, SimpleCumulativeQuestion])
+            question_cls = random.choice([
+                LocationQuestion, 
+                VelocityQuestion, 
+                SimpleCumulativeQuestion,
+                ElaborativeCumulativeQuestion
+                ])
             qa_generator = question_cls(annotation.locations, annotation.velocities)
 
             # choose objects and retrieve attributes 
@@ -137,25 +150,30 @@ def export_qa(
             frame_id = random.randint(0, annotation.locations.shape[1]-1)
 
             color = annotation.object_properties[object_id].color
+            material = annotation.object_properties[object_id].material
             shape = annotation.object_properties[object_id].shape
+
+            square_error = None
 
             # generate QA text
             if isinstance(qa_generator, Union[LocationQuestion, VelocityQuestion]):
-                question, answer = qa_generator.generate_qa(object_id, color, shape, frame_id)
-            elif isinstance(qa_generator, SimpleCumulativeQuestion):
-                start_frame_idx = random.randint(0, annotation.locations.shape[0]-1-FRAME_RATE)
-                end_frame_idx = random.randint(start_frame_idx+FRAME_RATE, annotation.locations.shape[0]-1)
+                question, answer = qa_generator.generate_qa(object_id, color, material, shape, frame_id)
+            elif isinstance(qa_generator, Union[SimpleCumulativeQuestion, ElaborativeCumulativeQuestion]):
+                interval = FRAME_RATE // 2
+                start_frame_idx = random.randint(0, (annotation.locations.shape[1]-1-FRAME_RATE) // interval) * interval
+                end_frame_idx = random.randint((start_frame_idx+FRAME_RATE) // interval, (annotation.locations.shape[1]-1) // interval) * interval
                 related_collisions = [] 
                 for c in annotation.collisions:
-                    if (c.frame_id>=start_frame_idx and c.frame_id<end_frame_idx):
+                    if (c.frame_id>=start_frame_idx and c.frame_id<end_frame_idx and object_id in c.object_ids):
                         related_collisions.append(c)
                 related_collisions = sorted(related_collisions, key=lambda x: x.frame_id)
 
-                question, answer = qa_generator.generate_qa(
+                question, answer, square_error = qa_generator.generate_qa(
                     object_id, 
                     annotation.object_properties, 
                     related_collisions, 
                     color, 
+                    material,
                     shape, 
                     start_frame_idx, 
                     end_frame_idx
@@ -167,6 +185,7 @@ def export_qa(
                 "question_type": qa_generator.question_type,
                 "question_subtype": qa_generator.question_subtype,
                 "program": [],
+                "square_error": square_error,
                 "answer": answer
             }
             questions.append(question_dict)
@@ -192,6 +211,7 @@ def export_qa(
 
 def main()->None:
     train_annotations, valid_annotaitons = load_annotation()
+    export_qa(train_annotations, "train")
     export_qa(valid_annotaitons, "validation")
 
 if __name__ == "__main__":
